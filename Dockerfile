@@ -1,4 +1,4 @@
-FROM openjdk:17-jdk-alpine as builder
+FROM bellsoft/liberica-openjdk-alpine-musl:17 as builder
 
 WORKDIR /app
 
@@ -12,7 +12,7 @@ COPY ./src ./src
 
 RUN ./mvnw clean package -DskipTests
 
-FROM openjdk:17-jdk-alpine
+FROM bellsoft/liberica-openjdk-alpine-musl:17
 
 WORKDIR /app
 
