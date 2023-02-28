@@ -17,7 +17,7 @@ public class HelloWorldController {
     @GetMapping("/say-hello")
     public ResponseEntity<Map<String,String>> sayHello(){
         Map<String,String> response= new HashMap<>();
-        response.put("message","Hello world");
+        response.put("message","Hello world my friends kjsadhajshgd");
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
     @GetMapping("/persona")
